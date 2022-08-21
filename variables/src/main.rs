@@ -43,4 +43,20 @@ fn main() {
     let tup_zero =  tup.0; // accessing elements in tuple
     let tup_one =  tup.1;
     println!("Accessing values with tuple index: {tup_zero}, {tup_one}");
+
+
+    // Arrays: Brackets again and no changing of array sizes!
+    
+    let arr: [i32; 5] = [1, 2, 3, 4, 5]; // can be initiated the old fashion way
+    let a = [3; 5]; // is the same as [3, 3, 3, 3, 3]
+
+    let zeroth = arr[0];
+    let first = arr[1];
+    println!("Accessing arrays with index: {}, {}", zeroth, first);
+
+    let impossible = a[10]; // Out of index errors are only found out during runtime!
+                            // At least it checks the array length and protects against invalid
+                            // memory access!
+
+    println!("{impossible}");
 }
